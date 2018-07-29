@@ -1,0 +1,33 @@
+//media maxsize 992px
+@include media($max_lg)
+{
+	nav
+	{
+		.navbar-collapse.show
+		{
+			.navbar-nav
+			{
+		    	transform: translate(0);
+			}
+		}
+		.navbar-nav
+		{
+			padding-top:80px;
+		    position: fixed;
+		    top: 0px;
+		    left: 0px;
+		    bottom: 0px;
+		    width: 100%;
+		    height: 100%;
+		    overflow: auto;
+		    background: $text-color;
+		    z-index: 999;
+		    transform: translate(-100%);
+		}
+		.nav-item
+		{
+			font-size: 1.5em;
+			margin: 5px 5%;
+		}
+	}
+}

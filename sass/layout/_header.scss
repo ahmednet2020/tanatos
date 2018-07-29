@@ -1,0 +1,51 @@
+header
+{
+	display: flex;
+    flex-direction: column;
+	padding: 1em 0;
+	position: relative;
+	background: url("https://cdn.pixabay.com/photo/2018/07/14/15/27/cafe-3537801_960_720.jpg") no-repeat;
+    background-size: cover;
+	height:500px;
+	min-height: 500px;
+	height: 100vh;
+	overflow: hidden;
+	&:before
+	{
+		content:"";
+		display:block;
+		background-color:rgba($text-color,0.8);
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    bottom: 0;
+	    right: 0;
+	}
+	.header-content
+	{
+		position: relative;
+		margin: auto;
+	    color: $white-color;
+		text-align: center;
+	}
+	.btn-header
+	{
+		display: inline-block;
+		text-transform: uppercase;
+	    color: $white-color;
+	    margin: 1em 5%;
+	    border-radius: 50px;
+    	padding: 0.5em 1em;
+	    &:hover
+	    {
+	    	background-color: $main-color;
+	    }
+	}
+	.arrow-header
+	{
+	    color: $white-color;
+	    font-size: 3em;
+	    width: 100%;
+	    position: relative;
+	}
+}

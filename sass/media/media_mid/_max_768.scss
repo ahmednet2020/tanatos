@@ -1,0 +1,27 @@
+//media maxsize 768px
+@include media($max_mid)
+{
+	.contact
+	{
+		.list-inline
+		{
+			text-align: center;
+     		margin-top: 1em;
+		}
+
+	}
+	footer
+	{
+		.copy-right,
+		.name
+		{
+			display: block;
+			width: 100%;
+			text-align: center;
+		}
+		.name
+		{
+			margin-top: 1em;
+		}
+	} 
+}

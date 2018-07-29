@@ -1,0 +1,28 @@
+.btn
+{
+	font-weight: bold;
+	@extend %fontheading;
+}
+.btn-primery
+{
+	background-color:$main-color;
+	color:$white-color;
+	text-transform: uppercase;
+	&:hover
+	{
+		color:$main-color;
+		background-color:$white-color;
+	}
+}
+.btn-dark
+{
+	border:none;
+	background-color:$white-color;
+	color:$text-color;
+	text-transform: uppercase;
+	&:hover
+	{
+		color:$white-color;
+		background-color:$text-color;
+	}
+}

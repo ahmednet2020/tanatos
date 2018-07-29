@@ -1,0 +1,69 @@
+.our-team
+{
+	text-align: center;
+	.team-img
+	{
+		position: relative;
+		border-radius: 15px;
+		overflow: hidden;
+    	transform-origin: bottom;
+    	transition: transform 0.2s ease-in-out;
+    	img
+    	{
+    		width: 100%;
+    		height: 250px;
+    	}
+    	&:after
+    	{
+    		content:"";
+    		position:absolute;
+    		bottom:0;
+    		right: 0;
+    		left: 0;
+    		height: 0px;
+    		background-color:rgba($main-color,0.7);
+    		transition: height 0.2s ease-in-out;
+    	}
+    	&:hover
+    	{
+    		transform: scale(1,1.1);
+    		&:after
+    		{
+    			height:15px;
+    		}
+    	}
+	}
+	.list-inline-item
+	{
+		a
+		{
+	    	display: inline-block;
+		    width: 30px;
+		    height: 30px;
+		    line-height: 30px;
+	    	border-radius: 50%;
+	    	color:$white-color;
+	    	&[aria-label="facebook"]
+	    	{
+				background-color: #007bff;
+	    	}
+	    	&[aria-label="twitter"]
+	    	{
+				background-color: #00d4ff;
+	    	}
+	    	&[aria-label="google-plus"]
+	    	{
+				background-color: #dc3545;
+	    	}
+	    }
+	}
+	.dota
+	{
+		color:rgba($text-color,0.7);
+		.list-inline-item:hover
+		{
+			cursor: pointer;
+			color:$main-color;
+		}
+	}
+}

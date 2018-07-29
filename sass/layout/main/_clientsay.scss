@@ -1,0 +1,29 @@
+.client-say
+{
+	position: relative;
+	background: url("https://cdn.pixabay.com/photo/2018/07/14/15/27/cafe-3537801_960_720.jpg") no-repeat;
+    background-size: cover;
+	overflow: hidden;
+	&:before
+	{
+		content:"";
+		display:block;
+		background-color:rgba($text-color,0.8);
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    bottom: 0;
+	    right: 0;
+	}
+	.carousel-caption
+	{
+		position: static;
+	}
+	.client-img
+	{
+		margin-bottom: 2em;
+		border-radius: 50%;
+		height:150px;
+		width: 150px;
+	}
+}

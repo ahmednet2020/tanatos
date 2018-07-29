@@ -1,0 +1,23 @@
+.about
+{
+	.about-section
+	{
+	    padding: 1em;
+	}
+	.about-content
+	{
+		column-count: 4;
+	    text-align: center;
+	    color:rgba($text-color,0.7);
+	}
+	.about-icon
+	{
+		font-size:3em;
+		margin-bottom:0.5em;
+	}
+	.about-title
+	{
+		font-size:1.2em;
+		margin-bottom:0.5em;
+	}
+}

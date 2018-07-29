@@ -1,0 +1,39 @@
+//media minisize 992px
+@include media($min_lg)
+{
+	.header-content
+	{
+		p
+		{
+			margin: auto;
+			width:50%;
+		}
+	}
+	nav
+	{
+		.navbar-collapse
+		{
+			order:1;
+			flex: 1 0 auto;
+			&.show
+			{
+				.navbar-nav
+				{
+					transform: translateX(0);
+				}
+			}
+		}
+		.navbar-toggler
+		{
+			order:2;
+		}
+		.navbar-nav
+		{
+			flex-direction: row;
+			justify-content: flex-end;
+			transform: translateX(100%);
+		}
+
+	}
+	
+}
