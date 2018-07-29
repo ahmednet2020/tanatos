@@ -111,7 +111,7 @@ header {
           flex-direction: column;
   padding: 1em 0;
   position: relative;
-  background: url("https://cdn.pixabay.com/photo/2018/07/14/15/27/cafe-3537801_960_720.jpg") no-repeat;
+  background: url("https://cdn.pixabay.com/photo/2015/09/05/19/58/girl-924903_960_720.jpg") no-repeat;
   background-size: cover;
   height: 500px;
   min-height: 500px;
@@ -224,7 +224,7 @@ nav {
 
 .subscribe {
   position: relative;
-  background: url("https://cdn.pixabay.com/photo/2018/07/14/15/27/cafe-3537801_960_720.jpg") no-repeat;
+  background: url("https://cdn.pixabay.com/photo/2015/09/05/19/58/girl-924903_960_720.jpg") no-repeat;
   background-size: cover;
   overflow: hidden; }
   .subscribe:before {
@@ -277,7 +277,7 @@ nav {
 
 .client-say {
   position: relative;
-  background: url("https://cdn.pixabay.com/photo/2018/07/14/15/27/cafe-3537801_960_720.jpg") no-repeat;
+  background: url("https://cdn.pixabay.com/photo/2015/09/05/19/58/girl-924903_960_720.jpg") no-repeat;
   background-size: cover;
   overflow: hidden; }
   .client-say:before {
@@ -348,7 +348,7 @@ nav {
 
 .contact {
   position: relative;
-  background: url("https://cdn.pixabay.com/photo/2018/07/14/15/27/cafe-3537801_960_720.jpg") no-repeat;
+  background: url("https://cdn.pixabay.com/photo/2015/09/05/19/58/girl-924903_960_720.jpg") no-repeat;
   background-size: cover;
   overflow: hidden;
   text-align: center; }

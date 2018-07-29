@@ -3,14 +3,17 @@
   "version": "1.0.2",
   "description": "",
   "main": "index.js",
+  "homepage":"https://github.com/ahmednet2020/tanatos",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "ahmednet2020",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^9.0.1",
+    "gh-pages": "^1.2.0",
     "grunt": "^1.0.3",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-postcss": "^0.9.0",
