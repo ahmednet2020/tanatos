@@ -101,6 +101,82 @@ h6 {
   white-space: nowrap; }
 
 /*===== end font style ===== */
+.pre-load {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 99999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+  .pre-load:after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: transparent;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 2px solid rgba(59, 67, 76, 0.3);
+    border-bottom-color: #f7600e;
+    -webkit-animation: loop 1s linear infinite;
+            animation: loop 1s linear infinite; }
+  .pre-load .line {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+    background-color: #fff;
+    -webkit-transition: -webkit-transform 0.8s ease-out;
+    transition: -webkit-transform 0.8s ease-out;
+    transition: transform 0.8s ease-out;
+    transition: transform 0.8s ease-out, -webkit-transform 0.8s ease-out;
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom; }
+    .pre-load .line:nth-child(2) {
+      -webkit-transition-delay: 0.2s;
+              transition-delay: 0.2s; }
+    .pre-load .line:nth-child(3) {
+      -webkit-transition-delay: 0.3s;
+              transition-delay: 0.3s; }
+    .pre-load .line:nth-child(4) {
+      -webkit-transition-delay: 0.1s;
+              transition-delay: 0.1s; }
+    .pre-load .line:nth-child(5) {
+      -webkit-transition-delay: 0.4s;
+              transition-delay: 0.4s; }
+  .pre-load.hidden .line {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0); }
+
+@-webkit-keyframes loop {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg); }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg); } }
+
+@keyframes loop {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg); }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg); } }
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -145,6 +221,41 @@ header {
     font-size: 3em;
     width: 100%;
     position: relative; }
+  header .text {
+    position: relative;
+    color: transparent; }
+    header .text:after {
+      content: attr(data-text);
+      color: #f7600e;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 0%;
+      overflow: hidden;
+      -webkit-animation: text 2s steps(7) infinite;
+              animation: text 2s steps(7) infinite;
+      white-space: nowrap;
+      border-right: 1px solid #3b434c; }
+
+@-webkit-keyframes text {
+  0% {
+    width: 0%; }
+  25%,
+  50%,
+  75% {
+    width: 100%; }
+  100% {
+    width: 0%; } }
+
+@keyframes text {
+  0% {
+    width: 0%; }
+  25%,
+  50%,
+  75% {
+    width: 100%; }
+  100% {
+    width: 0%; } }
 
 nav {
   color: #fff;
@@ -296,6 +407,9 @@ nav {
     border-radius: 50%;
     height: 150px;
     width: 150px; }
+  .client-say .carousel-inner {
+    width: 70%;
+    margin: auto; }
 
 .our-team {
   text-align: center; }
@@ -448,7 +562,17 @@ footer {
     width: 100%;
     text-align: center; }
   footer .name {
-    margin-top: 1em; } }
+    margin-top: 1em; }
+  .about .about-content {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2; } }
+
+@media all and (max-width: 575px) {
+  .about .about-content {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1; } }
 
 @media all and (min-width: 993px) {
   .header-content p {
