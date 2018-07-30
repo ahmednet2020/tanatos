@@ -1,4 +1,11 @@
 //media maxsize 575px
 @include media($max_sm) 
 {
+	.about
+	{
+		.about-content
+		{
+			column-count: 1;
+		}
+	}
 }

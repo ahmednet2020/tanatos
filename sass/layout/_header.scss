@@ -48,4 +48,39 @@ header
 	    width: 100%;
 	    position: relative;
 	}
+	.text
+	{
+		position: relative;
+		color: transparent;
+		&:after
+		{
+			content:attr(data-text);
+			color: $main-color;
+		    position: absolute;
+		    left: 0;
+		    top: 0;
+		    width: 0%;
+		    overflow: hidden;
+		    animation:text 2s steps(7) infinite;
+		    white-space: nowrap;
+		    border-right: 1px solid $text-color;
+		}
+	}
+}
+@keyframes text
+{
+	0%
+	{
+		width:0%;
+	}
+	25%,
+	50%,
+	75%
+	{
+		width: 100%;
+	}
+	100%
+	{
+		width: 0%;
+	}
 }

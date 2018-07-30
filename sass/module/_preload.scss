@@ -1,0 +1,70 @@
+.pre-load
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: transparent;
+	z-index: 99999;
+	display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    &:after
+    {
+    	content: "";
+	    display: block;
+	    width: 100px;
+	    height: 100px;
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    background-color: transparent;
+	    transform: translate(-50%,-50%);
+	    border-radius: 50%;
+	    border: 2px solid rgba($text-color,0.3);
+	    border-bottom-color: $main-color;
+	    animation:loop 1s linear infinite;
+    }
+    .line
+    {
+    	flex: 1 0 auto;
+    	background-color: $white-color;
+    	transition: transform 0.8s ease-out;
+    	transform-origin: bottom;
+    	&:nth-child(2)
+    	{
+			transition-delay: 0.2s;
+    	}
+    	&:nth-child(3)
+    	{
+			transition-delay: 0.3s;
+    	}
+    	&:nth-child(4)
+    	{
+			transition-delay: 0.1s;
+    	}
+    	&:nth-child(5)
+    	{
+			transition-delay: 0.4s;
+    	}
+    }
+    &.hidden
+    {
+    	.line
+    	{
+    		transform: scale(1,0);
+    	}
+    }
+}
+@keyframes loop
+{
+	0%
+	{
+		transform: translate(-50%,-50%) rotate(0deg);
+	}
+	100%
+	{
+		transform: translate(-50%,-50%) rotate(360deg);
+	}
+}
